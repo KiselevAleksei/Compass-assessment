@@ -9,16 +9,16 @@ import org.junit.jupiter.api.Test;
 
 public class ExcelParserTest {
 
-    // @Test
-    // public void testParseExcel() {
-    // // Path to test Excel file
-    // String testFilePath = "contact_matcher\\src\\main\\resources\\test.xlsx";
-    // List<Contact> contacts = ExcelParser.parseExcel(testFilePath);
+    @Test
+    public void testParseExcel() {
+    // Path to test Excel file
+    String testFilePath = "contact_matcher\\src\\main\\resources\\test.xlsx";
+    List<Contact> contacts = ExcelParser.parseExcel(testFilePath);
 
-    // // Example assertions
-    // assertNotNull(contacts, "Contacts list should not be null");
-    // assertFalse(contacts.isEmpty(), "Contacts list should not be empty");
-    // }
+    // Example assertions
+    assertNotNull(contacts, "Contacts list should not be null");
+    assertFalse(contacts.isEmpty(), "Contacts list should not be empty");
+    }
 
     @Test
     public void testDetermineAccuracy() {
