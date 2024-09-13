@@ -51,6 +51,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- add Jaro-Winkler library to use String similarity algorithms -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.10.0</version> <!-- Use the latest stable version -->
+        </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>

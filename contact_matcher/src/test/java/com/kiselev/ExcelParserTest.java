@@ -11,13 +11,13 @@ public class ExcelParserTest {
 
     @Test
     public void testParseExcel() {
-    // Path to test Excel file
-    String testFilePath = "contact_matcher\\src\\main\\resources\\test.xlsx";
-    List<Contact> contacts = ExcelParser.parseExcel(testFilePath);
+        // Path to test Excel file
+        String testFilePath = "contact_matcher\\src\\main\\resources\\test.xlsx";
+        List<Contact> contacts = ExcelParser.parseExcel(testFilePath);
 
-    // Example assertions
-    assertNotNull(contacts, "Contacts list should not be null");
-    assertFalse(contacts.isEmpty(), "Contacts list should not be empty");
+        // Example assertions
+        assertNotNull(contacts, "Contacts list should not be null");
+        assertFalse(contacts.isEmpty(), "Contacts list should not be empty");
     }
 
     @Test
@@ -41,7 +41,7 @@ public class ExcelParserTest {
         contacts.add(new Contact(3, "Jane", "Smith", "jane@example.com", 67890, "456 Avenue"));
 
         // Call the processContacts method and capture the result
-        List<String> results = ExcelParser.processContacts(contacts);
+        List<String> results = ExcelParser.processContactsByHashMap(contacts);
 
         // Verify that the results contain the expected matches
         assertNotNull(results, "Results should not be null");
