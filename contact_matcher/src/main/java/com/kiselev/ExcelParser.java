@@ -252,9 +252,9 @@ public class ExcelParser {
 
         // Processing the contact data
         long startTime = System.currentTimeMillis();
-        // List<String> results = processContactsByListLoop(contactList);
         List<String> results = processContactsByHashMap(contactList);
         long stopTime = System.currentTimeMillis();
+        // print algorithm running time
         System.out.println(">>> Elapsed time: " + (stopTime - startTime) + " millseconds");
 
         startTime = System.currentTimeMillis();
@@ -265,7 +265,7 @@ public class ExcelParser {
         System.out.println(">>> Elapsed time concurrent: " + (stopTime - startTime) + " millseconds");
 
         // Print results
-        writeResultsToFile(results);
+        writeResultsToFile(resultsConcurent);
 
     }
 }
